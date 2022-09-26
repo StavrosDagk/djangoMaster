@@ -1,0 +1,15 @@
+{%extends 'core/base.html'%}
+
+{%block title %} {{article.title}} | {%endblock%}
+
+{%block content %}
+<div class='container'>
+        <div class = 'row'  style= 'margin: 1rem 0 1rem 0'>
+        <div class="blog-post">
+            <h2 class="blog-post-title">{{article.title}}</h2>
+            <p class="blog-post-meta">{{article.created_at |date:'d-M-Y H:i'}}</p>
+            <p>{{article.body}}</p>
+        </div>
+    </div>
+</div>
+{%endblock%}
